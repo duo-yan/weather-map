@@ -74,6 +74,7 @@ function initAutocomplete() {
             temp = K2C(data.main.temp);
             humidity = data.main.humidity;
             wind = data.wind.speed;
+            icon = data.weather[0].id;
 
 
             var contentString = '<div id="content">'+
@@ -81,7 +82,8 @@ function initAutocomplete() {
                 '</div>'+
                 '<h3 id="firstHeading" class="firstHeading">' + markers["title"] + '</h3>'+
                 '<div id="bodyContent">'+
-                '<div> temperature: '+ temp + '</div>' +
+                '<div> <img id = "icon" width = "75px" src = "imgs/codes/'+ icon +'.png" /> </div>'+
+                '<div> temperature: '+ temp + '&degC</div>' +
                 '<div> humidity: '+ humidity + '%' + '</div>' +
                 '<div> wind speed: '+ wind + 'm/s ' + '</div>' +
 
